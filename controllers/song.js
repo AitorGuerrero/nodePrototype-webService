@@ -5,8 +5,8 @@ exports.addChannel = function(req, res) {
         },
         repository = require('nodePrototype-src/infrastructure/persistence/mongodb/PerformerRepository')
             .New(this.get('db')),
-        command = require('nodePrototype-src/commands/performer/create/SongCreateCommand')
-            .New(repository);
+        Command = require('nodePrototype-src/commands/performer/create/SongCreateCommand'),
+        command = new Command(repository);
 
     command.exec(request, function(err) {
         res.json({code: 0});
