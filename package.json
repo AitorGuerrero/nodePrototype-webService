@@ -2,15 +2,15 @@
   "name": "nodePrototype-webService",
   "version": "1.0.0",
   "description": "nodePrototype-webService ========================",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/AitorGuerrero/nodePrototype-webService.git"
   },
-  "author": "",
+  "author": "Aitor Guerrero <aguerrerolasarte@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AitorGuerrero/nodePrototype-webService/issues"
