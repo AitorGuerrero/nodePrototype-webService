@@ -1,4 +1,4 @@
-exports.addChannel = function(req, res) {
+exports.add = function(req, res) {
     var request = {name: req.body.name},
         repository = require('nodePrototype-src/infrastructure/persistence/mongodb/PerformerRepository')
             .New(this.get('db')),

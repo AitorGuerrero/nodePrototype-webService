@@ -1,4 +1,4 @@
-exports.addChannel = function(req, res) {
+exports.add = function(req, res) {
     var request = {
             name: req.body.name,
             performer: req.body.performer
