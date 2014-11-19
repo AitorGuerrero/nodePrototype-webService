@@ -16,4 +16,5 @@ exports.init = function(app) {
     app.post('/add_play', controllers.play.add.bind(app));
     app.get('/get_song_plays', controllers.play.getSongPlays.bind(app));
     app.get('/get_channel_plays', controllers.play.getChannelPlays.bind(app));
+    app.get('/get_top', controllers.play.getTop.bind(app));
 };

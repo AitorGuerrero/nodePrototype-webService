@@ -1,14 +1,16 @@
 exports.add = function(req, res) {
     var request = {
-            name: req.body.name,
-            performer: req.body.performer
+            name: req.param('name'),
+            performer: req.param('performer')
         },
-        repository = require('nodePrototype-src/infrastructure/persistence/mongodb/PerformerRepository')
-            .New(this.get('db')),
+        Repository = require('nodePrototype-src/infrastructure/persistence/mongodb/PerformerRepository'),
+        repository = new Repository(this.get('db')),
         Command = require('nodePrototype-src/commands/performer/create/SongCreateCommand'),
         command = new Command(repository);
 
     command.exec(request, function(err) {
-        res.json({code: 0});
+        var code;
+        code = err ? -1 : 0;
+        res.json({code: code});
     });
 }
