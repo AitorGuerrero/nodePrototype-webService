@@ -1,6 +1,6 @@
 nodePrototype-webService
 ========================
-This is a demo of NodeJS and MongoDB applying some concepts of DDD, like hexagonal architecture.
+This is a demo of NodeJS and MongoDB applying some concepts of DDD, like hexagonal architecture. It is deliberately over-architectured to apply DDD concepts.
 
 The project is divided in two repositories, the web service (this repository) and the [business logic](https://github.com/AitorGuerrero/nodePrototype-src).
 This repository have the business logic repository dependency through npm.
