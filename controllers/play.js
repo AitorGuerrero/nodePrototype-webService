@@ -77,7 +77,7 @@ exports.getTop = function(req, res) {
         },
         Repository = require('nodePrototype-src/infrastructure/persistence/mongodb/PlayRepository'),
         repository = new Repository(this.get('db')),
-        Query = require('nodePrototype-src/querys/play/GetChannelPlaysQuery'),
+        Query = require('nodePrototype-src/querys/song/GetTopQuery'),
         query = new Query(repository);
 
     query.exec(request, function(err, response) {
