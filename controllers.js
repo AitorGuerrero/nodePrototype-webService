@@ -14,6 +14,6 @@ exports.init = function(app) {
     app.post('/add_performer', controllers.performer.add.bind(app));
     app.post('/add_song', controllers.song.add.bind(app));
     app.post('/add_play', controllers.play.add.bind(app));
-};
     app.get('/get_song_plays', controllers.play.getSongPlays.bind(app));
     app.get('/get_channel_plays', controllers.play.getChannelPlays.bind(app));
+};
